@@ -41,8 +41,10 @@ void EditableButton::destroyEditLabel()
 void EditableButton::onEditFinished()
 {
     if (mEdit->isVisible()) {
-        this->setText(mEdit->text());
-        Q_EMIT textChanged(this->text());
+        if (mEdit->text() != this->text()) {
+            this->setText(mEdit->text());
+            Q_EMIT textChanged(this->text());
+        }
     }
     destroyEditLabel();
 }
@@ -53,6 +55,12 @@ void EditableButton::mouseDoubleClickEvent(QMouseEvent *ev)
     createEditLabel();
 }
 
+/**
+ * @brief EditableButton::focusOutEvent
+ * @param ev
+ *
+ * Override the focusOutEvent to force edit finish.
+ */
 void EditableButton::focusOutEvent(QFocusEvent *ev)
 {
     if (mEdit->isVisible()) {
@@ -68,6 +76,12 @@ EditableButtonLineEdit::EditableButtonLineEdit(QWidget *parent) : QLineEdit(pare
 
 }
 
+/**
+ * @brief EditableButtonLineEdit::focusOutEvent
+ * @param ev
+ *
+ * Override the focusOutEvent to force edit finish.
+ */
 void EditableButtonLineEdit::focusOutEvent(QFocusEvent *ev)
 {
     QLineEdit::focusOutEvent(ev);

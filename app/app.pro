@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -19,6 +19,7 @@ FORMS += \
     AppWindow.ui
 
 include(../components/Buttons/EditableButton/EditableButton.pri)
+include(../components/Buttons/LongPressButton/LongPressButton.pri)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

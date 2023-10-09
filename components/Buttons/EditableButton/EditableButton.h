@@ -12,13 +12,14 @@ class EditableButton : public QPushButton
 public:
     EditableButton(QWidget* parent=nullptr);
 
-
-
-
 Q_SIGNALS:
+    /**
+     * @brief textChanged signal emitted when edit finished.
+     * @param text the new text write to QPushButton
+     */
     void textChanged(const QString text);
 private:
-    EditableButtonLineEdit* mEdit;
+    EditableButtonLineEdit* mEdit;  ///< LineEdit
 
     void createEditLabel();
     void destroyEditLabel();

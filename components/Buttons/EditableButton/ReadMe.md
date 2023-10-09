@@ -1,4 +1,4 @@
-# EditableButton
+# LongPressButton
 
 This is a button which can be edittable.
 You can double-click the button to edit the text.

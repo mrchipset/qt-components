@@ -20,6 +20,7 @@ FORMS += \
 
 include(../components/Buttons/EditableButton/EditableButton.pri)
 include(../components/Buttons/LongPressButton/LongPressButton.pri)
+include(../components/TableWidget/DragableTableWidget/DragableTableWidget.pri)
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -2,6 +2,7 @@
 #define APPWINDOW_H
 
 #include <QMainWindow>
+#include "FooAPI.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class AppWindow; }

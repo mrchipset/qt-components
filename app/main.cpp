@@ -4,6 +4,7 @@
 #include "LongPressButton.h"
 #include <QDialog>
 #include <QDebug>
+#include "FooAPI.h"
 
 int main(int argc, char *argv[])
 {
@@ -29,5 +30,9 @@ int main(int argc, char *argv[])
     });
     btn.move(100, 100);
     dlg.show();
+
+    FooAPI foo;
+    foo.foo();
+    qDebug() << "3 + 5 = " << foo.sum(3, 5);
     return a.exec();
 }

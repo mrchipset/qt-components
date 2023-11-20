@@ -9,3 +9,6 @@ Some Qt components
 
 ## TableWidget
 1. [DragableTableWidget](components/TableWidget/DragableTableWidget) - A Button which its text can be editable by double-click
+
+## Core
+1. [DynamicLibrary](dynamic_libraries/FooAPI) - A project to show how to create a dynamic library

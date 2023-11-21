@@ -12,3 +12,7 @@ Some Qt components
 
 ## Core
 1. [DynamicLibrary](dynamic_libraries/FooAPI) - A project to show how to create a dynamic library
+
+## Qt Remote Objects
+1. [SimpleROClient](QtRO/SimpleROClient) - A Simple Remote Objects Client
+2. [SimpleROServer](QtRO/SimpleROServer) - A Simple Remote Objects Server

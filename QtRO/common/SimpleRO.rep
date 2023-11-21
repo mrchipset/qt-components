@@ -1,0 +1,5 @@
+class SimpleROInterface
+{
+    SIGNAL(message(const QString& msg))    // send message to client
+    SLOT(void onMessage(const QString& msg))   // receive message from client
+}
